@@ -1,19 +1,13 @@
 [tool.poetry]
-name = "nhl-statistics-1"
+name = "hello-robot"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+robotframework = "^6.1.1"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.4.2"
-coverage = "^7.6.4"
-
-
-[tool.poetry.group.dec.dependencies]
-coverage = "^7.6.4"
 
 [build-system]
 requires = ["poetry-core"]

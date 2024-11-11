@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "viikko2"
+name = "webcntr"
 version = "0.1.0"
 description = ""
-authors = ["BorisVer <borisversonnen@gmail.com>"]
+authors = ["Matti Luukkainen <mluukkai@iki.fi>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.13"
 flask = "^3.0.3"
-pytest = "^8.3.3"
+robotframework = "^7.1.1"
+robotframework-seleniumlibrary = "^6.6.1"
 
 
 [build-system]
