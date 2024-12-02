@@ -65,7 +65,7 @@ class Kayttoliittyma:
             Komento.SUMMA: lambda: self._sovelluslogiikka.plus(arvo),
             Komento.EROTUS: lambda: self._sovelluslogiikka.miinus(arvo),
             Komento.NOLLAUS: self._sovelluslogiikka.nollaa,
-            Komento.KUMOA: lambda: None, 
+            Komento.KUMOA: self._sovelluslogiikka.kumoa, 
         }
 
         komento_map[komento]()
