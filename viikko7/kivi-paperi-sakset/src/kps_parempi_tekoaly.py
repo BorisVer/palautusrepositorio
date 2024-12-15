@@ -7,19 +7,17 @@ class KPSParempiTekoaly:
         tuomari = Tuomari()
         tekoaly = TekoalyParannettu(10)
 
-        ekan_siirto = input("Ensimmäisen pelaajan siirto: ")
-        tokan_siirto = tekoaly.anna_siirto()
-
-        print(f"Tietokone valitsi: {tokan_siirto}")
-
-        while self._onko_ok_siirto(ekan_siirto) and self._onko_ok_siirto(tokan_siirto):
-            tuomari.kirjaa_siirto(ekan_siirto, tokan_siirto)
-            print(tuomari)
-
+        while True:
             ekan_siirto = input("Ensimmäisen pelaajan siirto: ")
             tokan_siirto = tekoaly.anna_siirto()
 
             print(f"Tietokone valitsi: {tokan_siirto}")
+
+            if not (self._onko_ok_siirto(ekan_siirto) and self._onko_ok_siirto(tokan_siirto)):
+                break
+
+            tuomari.kirjaa_siirto(ekan_siirto, tokan_siirto)
+            print(tuomari)
             tekoaly.aseta_siirto(ekan_siirto)
 
         print("Kiitos!")
